@@ -1,0 +1,198 @@
+/* =====================
+   RESET
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* =====================
+   BODY
+===================== */
+body {
+    background: radial-gradient(circle at top, #3f3101, #000);
+    color: #eaeaea;
+    line-height: 1.6;
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgb(31, 26, 1), #816321);
+    box-shadow: 0 0 25px rgb(0, 0, 0);
+}
+
+header h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+header p {
+    color: rgb(255, 255, 255);
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.hero-img {
+    width: 90%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+}
+
+/* =====================
+   NAV
+===================== */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background: #3f3101;
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgb(3, 3, 3);
+}
+
+/* =====================
+   MAIN FLEX LAYOUT
+===================== */
+main {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: flex-start;
+}
+
+/* =====================
+   ARTICLE (LEFT)
+===================== */
+article {
+    flex: 3;
+    margin-bottom: 2.5rem;
+}
+
+article h2 {
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
+    border-left: 5px solid rgb(255, 255, 255);
+    padding-left: 12px;
+}
+
+/* =====================
+   MENU LIST
+===================== */
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* =====================
+   CARD (HIGH-TECH)
+===================== */
+.card {
+    background: linear-gradient(145deg, #111, #1b1b1b);
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    transition: 0.4s;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 1px solid rgb(138, 78, 10);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 25px rgb(255, 255, 255);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.card h4 {
+    color: rgb(255, 255, 255);
+    margin-top: 0.5rem;
+}
+
+.card p {
+    color: #fff;
+    opacity: 0.85;
+}
+
+/* =====================
+   ASIDE (RIGHT)
+===================== */
+aside {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #0f2027, #203a43);
+    box-shadow: 0 0 30px rgba(255,0,255,0.35);
+    position: sticky;
+    top: 20px;
+}
+
+aside h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(0,0,0,0.7);
+    color: rgb(247, 247, 247);
+    box-shadow: inset 0 0 15px rgba(107, 65, 11, 0.747);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        position: static;
+    }
+}
